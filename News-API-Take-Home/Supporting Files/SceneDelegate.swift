@@ -20,9 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         // Sets up the starting Root View Controller Programatically
+        let navigationController = UINavigationController(rootViewController: HomePageController(collectionViewLayout: UICollectionViewFlowLayout()))
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = HomePageViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 
